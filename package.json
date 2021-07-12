@@ -1,6 +1,6 @@
 {
 	"homepage": "https://asantanadurango.github.io/pokeApi/",
-	"name": "recordando",
+	"name": "pokeapi",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {

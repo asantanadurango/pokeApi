@@ -7,12 +7,15 @@ export const GLOBALSTYLE = createGlobalStyle`
       }
 
    body {
-      margin: 0;
-      font-size: 16px;
-      font-family: "Roboto", sans-serif;
-      background: #ccc;
-      display: grid;
-      place-items: center;
+		min-height:100vh;
+    	margin: 0;
+    	font-size: 16px;
+    	font-family: "Roboto", sans-serif;
+		background-image: url('https://wallpapercave.com/wp/wp3961348.jpg');
+		background-size:cover;
+   		background-position: 70% 0;
+    	display: grid;
+    	place-items: center;
       }
 
    @media (max-width: 500px) {
