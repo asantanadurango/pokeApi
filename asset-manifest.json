@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/pokeApi/static/js/main.457b4367.chunk.js",
+    "main.js.map": "/pokeApi/static/js/main.457b4367.chunk.js.map",
+    "runtime-main.js": "/pokeApi/static/js/runtime-main.373505dd.js",
+    "runtime-main.js.map": "/pokeApi/static/js/runtime-main.373505dd.js.map",
+    "static/js/2.8188eaa8.chunk.js": "/pokeApi/static/js/2.8188eaa8.chunk.js",
+    "static/js/2.8188eaa8.chunk.js.map": "/pokeApi/static/js/2.8188eaa8.chunk.js.map",
+    "index.html": "/pokeApi/index.html",
+    "static/js/2.8188eaa8.chunk.js.LICENSE.txt": "/pokeApi/static/js/2.8188eaa8.chunk.js.LICENSE.txt",
+    "static/media/logo.d466ebfa.png": "/pokeApi/static/media/logo.d466ebfa.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.373505dd.js",
+    "static/js/2.8188eaa8.chunk.js",
+    "static/js/main.457b4367.chunk.js"
+  ]
+}
