@@ -1,13 +1,32 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.png";
-import { GLOBALSTYLE, CONTAINER, CARD_HEAD, CARD, IMG_LOGO, IMGBOX, IMG_HEAD, HEAD_DETAILS, HEAD_DETAILS__TITLE, BADGE, BODY_CARD, BODY_CARD__TITLE, BODY_CARD__LIST, BODY_CARD__ITEM, BODY_CARD__TITLE_ITEM, BODY_CARD__LINK, ARROWS_BOX, ARROW_BTN } from "./styled-components";
+import React, { useState, useEffect } from 'react';
+import logo from './logo.png';
+import {
+	GLOBALSTYLE,
+	CONTAINER,
+	CARD_HEAD,
+	CARD,
+	IMG_LOGO,
+	IMGBOX,
+	IMG_HEAD,
+	HEAD_DETAILS,
+	HEAD_DETAILS__TITLE,
+	BADGE,
+	BODY_CARD,
+	BODY_CARD__TITLE,
+	BODY_CARD__LIST,
+	BODY_CARD__ITEM,
+	BODY_CARD__TITLE_ITEM,
+	BODY_CARD__LINK,
+	ARROWS_BOX,
+	ARROW_BTN,
+} from './styled-components';
 
 function App() {
 	const [pokemonOrder, setPokemonOrder] = useState(1);
-	const [pokemonColor, setPokemonColor] = useState("");
-	const [pokemonImg, setPokemonImg] = useState("");
-	const [pokemonName, setPokemonName] = useState("");
-	const [pokemonDescription, setPokemonDescription] = useState("Es muy amigable");
+	const [pokemonColor, setPokemonColor] = useState('');
+	const [pokemonImg, setPokemonImg] = useState('');
+	const [pokemonName, setPokemonName] = useState('');
+	const [pokemonDescription, setPokemonDescription] = useState('Es muy amigable');
 	const [pokemonStats, setPokemonStats] = useState({
 		hp: 0,
 		attack: 0,
@@ -35,7 +54,7 @@ function App() {
 		return;
 	};
 
-	const getPokemonColor = async (specieUrl) => {
+	const getPokemonColor = async specieUrl => {
 		if (!specieUrl) {
 			return;
 		}
@@ -50,13 +69,14 @@ function App() {
 		return pokemonSpecies.color?.name;
 	};
 
-	const getPokemonDescription = async (pokemonOrder) => {
+	const getPokemonDescription = async pokemonOrder => {
 		if (pokemonOrder > 30) pokemonOrder = Math.floor(Math.random() * 30) + 1;
 
 		const res = await fetch(`https://pokeapi.co/api/v2/characteristic/${pokemonOrder}`);
 		const data = await res.json();
-		const description = data.descriptions[1].description;
-		console.dir(description);
+		const { descriptions } = data;
+		const descriptionObj = descriptions.find(obj => obj.language.name.toLowerCase() === 'es');
+		const description = descriptionObj.description;
 		setPokemonDescription(description);
 		return;
 	};

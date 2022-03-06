@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GLOBALSTYLE = createGlobalStyle`
    * {
@@ -46,7 +46,7 @@ export const CONTAINER = styled.div`
 export const CARD_HEAD = styled.div`
 	position: relative;
 	height: 252px;
-	${({ color }) => `background: linear-gradient(45deg, ${color || "#fa782e"} , #fee );`}
+	${({ color }) => `background: linear-gradient(45deg, ${color || '#fa782e'} , #fee );`}
 	border-radius: 25px 25px 0 0;
 	border-bottom: 5px solid black;
 `;
@@ -91,7 +91,7 @@ export const HEAD_DETAILS = styled.div`
 	display: block;
 	padding: 0 20px;
 	font-size: 11px;
-	color: #fff;
+	${({ color }) => `color: ${color === 'white' ? '#000' : '#fff'};`}
 `;
 
 export const HEAD_DETAILS__TITLE = styled.div`
@@ -166,7 +166,7 @@ export const BODY_CARD__LINK = styled.a`
 	text-align: center;
 	line-height: 23px;
 	box-shadow: -5px 5px 1px rgba(0, 0, 0, 0.3);
-	${({ color }) => `background: ${color.toLowerCase() === "white" ? "black" : color};`}
+	${({ color }) => `background: ${color.toLowerCase() === 'white' ? 'black' : color};`}
 	color: #fff;
 	border-left: 2px solid #bbb;
 	border-bottom: 2px solid #bbb;
