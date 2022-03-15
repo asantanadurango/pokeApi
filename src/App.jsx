@@ -92,6 +92,7 @@ function App() {
 	const down = () => {
 		pokemonOrder > 1 && setPokemonOrder(pokemonOrder - 1);
 	};
+	console.log(pokemonColor);
 
 	return (
 		<>
@@ -104,7 +105,7 @@ function App() {
 						<IMGBOX>
 							<IMG_HEAD src={pokemonImg} alt='pokemon image' />
 						</IMGBOX>
-						<HEAD_DETAILS>
+						<HEAD_DETAILS color={pokemonColor}>
 							<BADGE>pokemon #{pokemonOrder}</BADGE>
 							<br />
 							<br />

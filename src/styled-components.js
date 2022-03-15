@@ -91,14 +91,15 @@ export const HEAD_DETAILS = styled.div`
 	display: block;
 	padding: 0 20px;
 	font-size: 11px;
-	${({ color }) => `color: ${color === 'white' ? '#000' : '#fff'};`}
+	font-weight: bold;
+	${({ color }) =>
+		`color: ${color.toLowerCase() === 'white' || color.toLowerCase() === 'yellow' || color.toLowerCase() === 'pink' ? '#000' : '#fff'};`}
 `;
 
 export const HEAD_DETAILS__TITLE = styled.div`
 	display: block;
 	padding: 0 20px;
 	font-size: 11px;
-	color: #fff;
 `;
 
 export const BADGE = styled.div`
